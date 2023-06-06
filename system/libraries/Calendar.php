@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/userguide3/libraries/calendar.html
  */
-class CI_Calendar {
+class CI_Calendar extends stdClass {
 
 	/**
 	 * Calendar layout template

@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/userguide3/libraries/file_uploading.html
  */
-class CI_Upload {
+class CI_Upload extends stdClass {
 
 	/**
 	 * Maximum file size

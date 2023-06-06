@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link
  */
-class CI_Driver_Library {
+class CI_Driver_Library extends stdClass {
 
 	/**
 	 * Array of drivers that are available to use with the driver class
