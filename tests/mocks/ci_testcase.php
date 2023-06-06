@@ -338,23 +338,6 @@ class CI_TestCase extends \PHPUnit\Framework\TestCase {
 	// Internals
 	// --------------------------------------------------------------------
 
-	/**
-	 * Overwrite runBare
-	 *
-	 * PHPUnit instantiates the test classes before
-	 * running them individually. So right before a test
-	 * runs we set our instance. Normally this step would
-	 * happen in setUp, but someone is bound to forget to
-	 * call the parent method and debugging this is no fun.
-	 */
-	public function runBare()
-	{
-		self::$ci_test_instance = $this;
-		parent::runBare();
-	}
-
-	// --------------------------------------------------------------------
-
 	public function helper($name)
 	{
 		require_once(SYSTEM_PATH.'helpers/'.$name.'_helper.php');
