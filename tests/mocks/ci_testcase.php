@@ -1,4 +1,5 @@
 <?php
+namespace Tests\Mocks;
 
 class CI_TestCase extends \PHPUnit\Framework\TestCase {
 

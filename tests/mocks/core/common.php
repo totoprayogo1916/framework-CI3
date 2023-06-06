@@ -2,11 +2,13 @@
 
 // Set up the global CI functions in their most minimal core representation
 
+use Tests\Mocks\CI_TestCase;
+
 if ( ! function_exists('get_instance'))
 {
 	function &get_instance()
 	{
-		$test = CI_TestCase::instance();
+		$test = new CI_TestCase();
 		$test = $test->ci_instance();
 		return $test;
 	}
@@ -18,7 +20,7 @@ if ( ! function_exists('get_config'))
 {
 	function &get_config()
 	{
-		$test = CI_TestCase::instance();
+		$test = new CI_TestCase();
 		$config = $test->ci_get_config();
 		return $config;
 	}
@@ -75,7 +77,7 @@ if ( ! function_exists('load_class'))
 			throw new Exception('Not Implemented: Non-core load_class()');
 		}
 
-		$test = CI_TestCase::instance();
+		$test = new CI_TestCase();
 
 		$obj =& $test->ci_core_class($class);
 
